@@ -1,0 +1,147 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body { font-family: Arial; background:#111; color:white; margin:0; padding:16px; }
+h1 { text-align:center; padding:20px; }
+.botao-grupo { margin:10px 0; display:flex; justify-content:center; gap:10px; }
+.btn-idioma { padding:8px 12px; background:#222; color:white; border:1px solid #555; border-radius:6px; cursor:pointer; }
+.btn-idioma:hover { background:#444; }
+.btn-selecionado { background:gold; color:black; border:1px solid white; }
+.grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap:16px; padding:16px; }
+.card { text-align:center; }
+.card img { width:100%; height:auto; border-radius:10px; transition: transform 0.2s; cursor:pointer; }
+.card img:hover { transform: scale(1.05); }
+p.titulo { font-size:14px; }
+</style>
+</head>
+<body>
+<h1 id="titulo">Filmes</h1>
+
+<div class="botao-grupo">
+    <button class="btn-idioma" id="btn-pt" onclick="setLang('pt')">PT</button>
+    <button class="btn-idioma" id="btn-en" onclick="setLang('en')">EN</button>
+</div>
+
+<div class="grid">
+    
+        <div class="card"
+             data-nome-pt="Missão Refúgio" data-poster-pt="imagens/pt/Missão Refúgio.jpeg" data-link-pt="filmes_html/Missão_Refúgio.html"
+             data-nome-en="Shelter" data-poster-en="imagens/en/Shelter.jpeg" data-link-en="filmes_html/Missão_Refúgio.html">
+            <img src="imagens/pt/Missão Refúgio.jpeg" alt="Missão Refúgio" onclick="abrirFilme(this)">
+            <p class="titulo">Missão Refúgio</p>
+        </div>
+        
+        <div class="card"
+             data-nome-pt="O Som da Morte" data-poster-pt="imagens/pt/O Som da Morte.jpeg" data-link-pt="filmes_html/O_Som_da_Morte.html"
+             data-nome-en="Whistle" data-poster-en="imagens/en/Whistle.jpeg" data-link-en="filmes_html/O_Som_da_Morte.html">
+            <img src="imagens/pt/O Som da Morte.jpeg" alt="O Som da Morte" onclick="abrirFilme(this)">
+            <p class="titulo">O Som da Morte</p>
+        </div>
+        
+        <div class="card"
+             data-nome-pt="Cara de Um, Focinho de Outro" data-poster-pt="imagens/pt/Cara de Um, Focinho de Outro.jpeg" data-link-pt="filmes_html/Cara_de_Um,_Focinho_de_Outro.html"
+             data-nome-en="Hoppers" data-poster-en="imagens/en/Hoppers.jpeg" data-link-en="filmes_html/Cara_de_Um,_Focinho_de_Outro.html">
+            <img src="imagens/pt/Cara de Um, Focinho de Outro.jpeg" alt="Cara de Um, Focinho de Outro" onclick="abrirFilme(this)">
+            <p class="titulo">Cara de Um, Focinho de Outro</p>
+        </div>
+        
+        <div class="card"
+             data-nome-pt="Destruição Final 2" data-poster-pt="imagens/pt/Destruição Final 2.jpeg" data-link-pt="filmes_html/Destruição_Final_2.html"
+             data-nome-en="Greenland 2: Migration" data-poster-en="imagens/en/Greenland 2 Migration.jpeg" data-link-en="filmes_html/Destruição_Final_2.html">
+            <img src="imagens/pt/Destruição Final 2.jpeg" alt="Destruição Final 2" onclick="abrirFilme(this)">
+            <p class="titulo">Destruição Final 2</p>
+        </div>
+        
+        <div class="card"
+             data-nome-pt="Pânico 7" data-poster-pt="imagens/pt/Pânico 7.jpeg" data-link-pt="filmes_html/Pânico_7.html"
+             data-nome-en="Scream 7" data-poster-en="imagens/en/Scream 7.jpeg" data-link-en="filmes_html/Pânico_7.html">
+            <img src="imagens/pt/Pânico 7.jpeg" alt="Pânico 7" onclick="abrirFilme(this)">
+            <p class="titulo">Pânico 7</p>
+        </div>
+        
+        <div class="card"
+             data-nome-pt="O Morro dos Ventos Uivantes" data-poster-pt="imagens/pt/O Morro dos Ventos Uivantes.jpeg" data-link-pt="filmes_html/O_Morro_dos_Ventos_Uivantes.html"
+             data-nome-en="Wuthering Heights" data-poster-en="imagens/en/Wuthering Heights.jpeg" data-link-en="filmes_html/O_Morro_dos_Ventos_Uivantes.html">
+            <img src="imagens/pt/O Morro dos Ventos Uivantes.jpeg" alt="O Morro dos Ventos Uivantes" onclick="abrirFilme(this)">
+            <p class="titulo">O Morro dos Ventos Uivantes</p>
+        </div>
+        
+        <div class="card"
+             data-nome-pt="Caminhos do Crime" data-poster-pt="imagens/pt/Caminhos do Crime.jpeg" data-link-pt="filmes_html/Caminhos_do_Crime.html"
+             data-nome-en="Crime 101" data-poster-en="imagens/en/Crime 101.jpeg" data-link-en="filmes_html/Caminhos_do_Crime.html">
+            <img src="imagens/pt/Caminhos do Crime.jpeg" alt="Caminhos do Crime" onclick="abrirFilme(this)">
+            <p class="titulo">Caminhos do Crime</p>
+        </div>
+        
+        <div class="card"
+             data-nome-pt="A Noiva!" data-poster-pt="imagens/pt/A Noiva!.jpeg" data-link-pt="filmes_html/A_Noiva!.html"
+             data-nome-en="The Bride!" data-poster-en="imagens/en/The Bride!.jpeg" data-link-en="filmes_html/A_Noiva!.html">
+            <img src="imagens/pt/A Noiva!.jpeg" alt="A Noiva!" onclick="abrirFilme(this)">
+            <p class="titulo">A Noiva!</p>
+        </div>
+        
+        <div class="card"
+             data-nome-pt="Um Cabra Bom de Bola" data-poster-pt="imagens/pt/Um Cabra Bom de Bola.jpeg" data-link-pt="filmes_html/Um_Cabra_Bom_de_Bola.html"
+             data-nome-en="GOAT" data-poster-en="imagens/en/GOAT.jpeg" data-link-en="filmes_html/Um_Cabra_Bom_de_Bola.html">
+            <img src="imagens/pt/Um Cabra Bom de Bola.jpeg" alt="Um Cabra Bom de Bola" onclick="abrirFilme(this)">
+            <p class="titulo">Um Cabra Bom de Bola</p>
+        </div>
+        
+        <div class="card"
+             data-nome-pt="O Testamento de Ann Lee" data-poster-pt="imagens/pt/O Testamento de Ann Lee.jpeg" data-link-pt="filmes_html/O_Testamento_de_Ann_Lee.html"
+             data-nome-en="The Testament of Ann Lee" data-poster-en="imagens/en/The Testament of Ann Lee.jpeg" data-link-en="filmes_html/O_Testamento_de_Ann_Lee.html">
+            <img src="imagens/pt/O Testamento de Ann Lee.jpeg" alt="O Testamento de Ann Lee" onclick="abrirFilme(this)">
+            <p class="titulo">O Testamento de Ann Lee</p>
+        </div>
+        
+</div>
+
+<script>
+let langAtual = "pt";
+
+// Detecta parâmetro lang da URL
+const urlParams = new URLSearchParams(window.location.search);
+const langParam = urlParams.get('lang');
+if(langParam === 'en') langAtual = 'en';
+
+// Atualiza botões de idioma
+function atualizarBotoes() {
+    document.querySelectorAll('.btn-idioma').forEach(btn => {
+        btn.classList.remove('btn-selecionado');
+        if(btn.id === "btn-" + langAtual) btn.classList.add('btn-selecionado');
+    });
+    // Atualiza grid com posters e títulos
+    document.querySelectorAll('.card').forEach(card => {
+        const img = card.querySelector('img');
+        const p = card.querySelector('.titulo');
+        if(langAtual === 'pt') {
+            img.src = card.dataset.posterPt;
+            p.innerText = card.dataset.nomePt;
+        } else {
+            img.src = card.dataset.posterEn;
+            p.innerText = card.dataset.nomeEn;
+        }
+    });
+    document.getElementById('titulo').innerText = langAtual === 'pt' ? 'Filmes' : 'Movies';
+}
+
+// Ao clicar no poster
+function abrirFilme(img) {
+    const card = img.parentElement;
+    const link = langAtual === 'pt' ? card.dataset.linkPt : card.dataset.linkEn;
+    window.location.href = link + "?lang=" + langAtual;
+}
+
+function setLang(l) {
+    langAtual = l;
+    atualizarBotoes();
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    atualizarBotoes();
+});
+</script>
+</body>
+</html>
