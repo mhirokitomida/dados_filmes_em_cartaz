@@ -1,6 +1,8 @@
 # 🎬 Movie Reviews Dashboard (Now Playing)
 
-Projeto de coleta, processamento e visualização de reviews de filmes em cartaz, utilizando dados da API do TMDb e web scraping de múltiplas fontes. Este Projeto foi desenvolvido para fins educacionais.
+👉 Acesse o resultado do projeto aqui: https://mhirokitomida.github.io/dados_filmes_em_cartaz/
+
+Projeto de coleta, processamento e visualização de reviews de filmes em cartaz, utilizando dados da API do TMDb e web scraping de múltiplas fontes. Este projeto foi desenvolvido para fins educacionais.
 
 ---
 
